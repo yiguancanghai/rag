@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  rag-app:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - STRICT_MODE=${STRICT_MODE:-True}
+      - CHUNK_SIZE=${CHUNK_SIZE:-1000}
+      - CHUNK_OVERLAP=${CHUNK_OVERLAP:-200}
+      - MAX_TOKENS=${MAX_TOKENS:-2000}
+      - TEMPERATURE=${TEMPERATURE:-0}
+      - MODEL_NAME=${MODEL_NAME:-gpt-4o}
+      - VECTOR_DB_PATH=${VECTOR_DB_PATH:-./vector_db}
+      - TOP_K_RESULTS=${TOP_K_RESULTS:-5}
+      - PAGE_TITLE=${PAGE_TITLE:-Document Q&A RAG Demo}
+      - PAGE_ICON=${PAGE_ICON:-📄🔍}
+    volumes:
+      - ./vector_db:/app/vector_db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3 
