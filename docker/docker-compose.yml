@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  intellidocs-pro:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: intellidocs-pro
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - CHROMA_PERSIST_DIRECTORY=/app/data/vector_db
+      - MAX_UPLOAD_SIZE_MB=100
+      - CHUNK_SIZE=1000
+      - CHUNK_OVERLAP=200
+      - TEMPERATURE=0.1
+      - MAX_TOKENS=2000
+    volumes:
+      # Persistent data storage
+      - ./data:/app/data
+      - ./logs:/app/logs
+      # Configuration (optional - for development)
+      - ../config/.env:/app/config/.env:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - intellidocs-network
+
+  # Optional: Add monitoring service
+  # watchtower:
+  #   image: containrrr/watchtower
+  #   container_name: intellidocs-watchtower
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   command: --interval 300 --cleanup intellidocs-pro
+  #   networks:
+  #     - intellidocs-network
+
+networks:
+  intellidocs-network:
+    driver: bridge
+
+volumes:
+  intellidocs-data:
+    driver: local
+  intellidocs-logs:
+    driver: local

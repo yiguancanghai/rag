@@ -1,0 +1,30 @@
+2025-06-25 20:49:28,845 - intellidocs - INFO - Vector store initialized successfully
+2025-06-25 20:54:43,686 - intellidocs - INFO - Vector store initialized successfully
+2025-06-25 20:55:26,205 - intellidocs - INFO - File saved: 4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx
+2025-06-25 20:55:26,206 - intellidocs - ERROR - Error loading document data/documents/4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx: No module named 'docx2txt'
+2025-06-25 21:14:49,518 - intellidocs - INFO - File already exists: 4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx
+2025-06-25 21:14:49,522 - intellidocs - ERROR - Error loading document data/documents/4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx: No module named 'docx2txt'
+2025-06-25 21:14:52,494 - intellidocs - INFO - File already exists: 4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx
+2025-06-25 21:14:52,495 - intellidocs - ERROR - Error loading document data/documents/4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx: No module named 'docx2txt'
+2025-06-25 21:15:52,737 - intellidocs - INFO - Vector store initialized successfully
+2025-06-25 21:18:39,913 - intellidocs - INFO - Vector store initialized successfully
+2025-06-25 21:18:56,653 - intellidocs - INFO - File already exists: 4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx
+2025-06-25 21:18:56,674 - intellidocs - INFO - Loaded 1 document chunks from 4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx
+2025-06-25 21:18:56,674 - intellidocs - INFO - Split 1 documents into 3 chunks
+2025-06-25 21:18:58,477 - intellidocs - INFO - Added 3 documents to vector store
+2025-06-25 21:19:14,870 - intellidocs - INFO - File already exists: 4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx
+2025-06-25 21:19:14,899 - intellidocs - INFO - Loaded 1 document chunks from 4fdcf756c44137b400dce22cd8b4f740_Lab04_Users and Permissions.docx
+2025-06-25 21:19:14,900 - intellidocs - INFO - Split 1 documents into 3 chunks
+2025-06-25 21:19:15,715 - intellidocs - INFO - Added 3 documents to vector store
+2025-06-25 21:19:43,686 - intellidocs - INFO - Added user message to chat history
+2025-06-25 21:19:56,446 - intellidocs - INFO - Query processed: 这是什么...
+2025-06-25 21:19:56,455 - intellidocs - INFO - Added user message to chat history
+2025-06-25 21:19:56,456 - intellidocs - INFO - Added assistant message to chat history
+2025-06-25 21:22:44,497 - intellidocs - INFO - Vector store initialized successfully
+2025-06-25 21:22:44,509 - intellidocs - INFO - Loaded 3 messages from history
+2025-06-25 21:27:29,050 - intellidocs - INFO - Vector store initialized successfully
+2025-06-25 21:27:29,055 - intellidocs - INFO - Loaded 3 messages from history
+2025-06-25 21:31:30,891 - intellidocs - INFO - Vector store initialized successfully
+2025-06-25 21:31:30,894 - intellidocs - INFO - Loaded 3 messages from history
+2025-06-25 21:34:22,421 - intellidocs - INFO - Vector store initialized successfully
+2025-06-25 21:34:22,433 - intellidocs - INFO - Loaded 3 messages from history
